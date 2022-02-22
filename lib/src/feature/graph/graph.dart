@@ -17,7 +17,7 @@ class Graph extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<BreathFlow>(
-        stream: bloc.breathFlowStream,
+        stream: bloc.breathFlowStream(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return const NoDataWidget();
